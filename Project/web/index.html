@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/11.0.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/11.0.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-performance-compat.js"></script>
+
+    <title>Kaciga IoT</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="theme-switcher">
+      <label class="switch">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider"></span>
+      </label>
+  </div>
+
+  <div class="data-head">Podaci sa kacige</div>
+
+<div class="data-container">
+  <div class="data-item">
+    <h2>Temperatura</h2>
+    <p class="value" id="temperature">22 &#8451;</p>
+  </div>
+  <div class="data-item">
+    <h2>Vlažnost</h2>
+    <p class="value" id="humidity">10%</p>
+  </div>
+      <div class="data-item">
+          <h2>Kvaliteta zraka</h2>
+          <p class="value" id="airQuality">--</p>
+      </div>
+</div>
+<div class="container">
+  <canvas id="temperatureChart"></canvas>
+      <canvas id="airQualityChart"></canvas>
+</div>
+  <div class="container">
+      <div class="data-item" id="ledColorContainer">
+          <h2>LED boja</h2>
+          <p class="value" id="ledColor">Zelena</p>
+      </div>
+      <div class="data-item">
+          <h2>Poziv radnika</h2>
+          <button id="toggleLed">Pozovi</button>
+      </div>
+  </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/min/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0"></script>
+
+
+  <script type="module" src="scripts.js"></script>
+  </body>
+</html>
